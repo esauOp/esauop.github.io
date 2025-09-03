@@ -1,0 +1,281 @@
+/* Reset and Base Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	background-color: #0a0a0a;
+	color: #ffffff;
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+.container {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+}
+
+/* Hero Section */
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1200px;
+	width: 100%;
+	position: relative;
+}
+
+/* Main Content - Center */
+.main-content {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.title {
+	font-size: 3.5rem;
+	font-weight: 700;
+	color: #ffffff;
+	margin-bottom: 1rem;
+}
+
+.carousel-container {
+	height: 4rem;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	min-width: 200px;
+}
+
+.carousel-text {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.carousel-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	font-weight: 600;
+	color: #00d4ff;
+	opacity: 0;
+	transform: translateY(20px);
+	transition: all 0.5s ease;
+	white-space: nowrap;
+}
+
+.carousel-item.active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Skills - Right Side */
+.skills {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	align-items: center;
+}
+
+.skill-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+	transform: translateY(-5px);
+}
+
+.skill-avatar {
+	width: 3.5rem;
+	height: 3.5rem;
+	border: 2px solid #333;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-avatar {
+	border-color: #00d4ff;
+	box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+}
+
+.skill-avatar i {
+	font-size: 1.5rem;
+	color: #888;
+	transition: color 0.3s ease;
+}
+
+.skill-item:hover .skill-avatar i {
+	color: #00d4ff;
+}
+
+.skill-name {
+	font-size: 0.9rem;
+	color: #888;
+	font-weight: 500;
+	text-align: center;
+	transition: color 0.3s ease;
+}
+
+
+
+/* Footer with Social Media Links */
+.hero-footer {
+	grid-column: 1 / -1;
+	display: flex;
+	justify-content: center;
+	margin-top: 3rem;
+}
+
+.social-links {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	align-items: center;
+}
+
+.social-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3rem;
+	height: 3rem;
+	/* border: 2px solid #333;
+	border-radius: 50%; */
+	color: #888;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	background: transparent;
+}
+
+.social-link:hover {
+	border-color: #00d4ff;
+	color: #00d4ff;
+	transform: translateY(-2px);
+	/* box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3); */
+}
+
+.social-link i {
+	font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+	.hero {
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+	}
+	
+	.title {
+		font-size: 3rem;
+	}
+}
+
+@media (max-width: 900px) {
+	.hero {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		gap: 3rem;
+		text-align: center;
+	}
+	
+	.skills {
+		grid-column: 1;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
+	}
+	
+	.title {
+		font-size: 2.5rem;
+	}
+	
+	.carousel-item {
+		font-size: 1.5rem;
+	}
+	
+	.social-links {
+		gap: 1.5rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.container {
+		padding: 1rem;
+	}
+	
+	.hero {
+		gap: 2rem;
+	}
+	
+	.title {
+		font-size: 2rem;
+	}
+	
+	.carousel-item {
+		font-size: 1.2rem;
+	}
+	
+	.social-links {
+		gap: 1rem;
+	}
+	
+	.social-link {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+	
+	.skill-avatar {
+		width: 3rem;
+		height: 3rem;
+	}
+	
+	.skills {
+		gap: 1.5rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.title {
+		font-size: 1.8rem;
+	}
+	
+	.carousel-item {
+		font-size: 1rem;
+	}
+	
+	.social-links {
+		gap: 0.8rem;
+	}
+	
+	.skills {
+		gap: 1rem;
+	}
+}
