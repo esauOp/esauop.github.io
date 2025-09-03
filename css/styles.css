@@ -88,7 +88,6 @@ body {
 /* Skills - Right Side */
 .skills {
 	position: absolute;
-	top: 2rem;
 	right: 2rem;
 	display: flex;
 	flex-direction: column;
@@ -188,8 +187,9 @@ body {
 	/* box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3); */
 }
 
-.social-link i {
-	font-size: 1.2rem;
+.social-icon {
+	width: 1.2rem;
+	height: 1.2rem;
 }
 
 /* Responsive Design */
