@@ -96,6 +96,10 @@ body {
 	align-items: center;
 }
 
+.skill-item-mobile-hidden {
+	display: block;
+}
+
 .skill-item {
 	display: flex;
 	flex-direction: column;
@@ -221,7 +225,7 @@ body {
 	}
 	
 	.carousel-item {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 	
 	.social-links {
@@ -243,7 +247,23 @@ body {
 	}
 	
 	.carousel-item {
-		font-size: 1.2rem;
+		font-size: 2rem;
+	}
+	
+	.skills {
+		position: fixed;
+		bottom: 6rem;
+		left: 0;
+		right: 0;
+		top: auto;
+		flex-direction: row;
+		justify-content: center;
+		gap: 1.5rem;
+		z-index: 100;
+	}
+	
+	.skill-item-mobile-hidden {
+		display: none;
 	}
 	
 	.social-links {
@@ -258,10 +278,6 @@ body {
 	.skill-avatar {
 		width: 3rem;
 		height: 3rem;
-	}
-	
-	.skills {
-		gap: 1.5rem;
 	}
 	
 	.page-footer {
