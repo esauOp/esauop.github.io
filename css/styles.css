@@ -49,7 +49,7 @@ body {
 }
 
 .carousel-container {
-	height: 4rem;
+	height: 6rem;
 	overflow: hidden;
 	position: relative;
 	width: 100%;
@@ -71,12 +71,12 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 2rem;
+	font-size: 4rem;
 	font-weight: 600;
 	color: #00d4ff;
 	opacity: 0;
 	transform: translateY(20px);
-	transition: all 0.5s ease;
+	transition: all 1.5s ease;
 	white-space: nowrap;
 }
 
@@ -146,11 +146,14 @@ body {
 
 
 /* Footer with Social Media Links */
-.hero-footer {
-	grid-column: 1 / -1;
+.page-footer {
+	position: fixed;
+	bottom: 2rem;
+	left: 0;
+	right: 0;
 	display: flex;
 	justify-content: center;
-	margin-top: 3rem;
+	z-index: 100;
 }
 
 .social-links {
@@ -260,6 +263,10 @@ body {
 	.skills {
 		gap: 1.5rem;
 	}
+	
+	.page-footer {
+		bottom: 1rem;
+	}
 }
 
 @media (max-width: 400px) {
@@ -277,5 +284,14 @@ body {
 	
 	.skills {
 		gap: 1rem;
+	}
+	
+	.page-footer {
+		bottom: 0.8rem;
+	}
+	
+	.social-link {
+		width: 2.2rem;
+		height: 2.2rem;
 	}
 }
